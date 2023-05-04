@@ -72,7 +72,7 @@ const uint32_t TeleFileImgInfoSize = sizeof(TeleFileImgInfo);
 
 
 struct __attribute__((__packed__)) CameraSettingsPacket {
-    int framesize;
+    uint8_t framesize;
     int  quality;
 	bool whiteBalanceEnable;
 	bool awbGainEnable;
