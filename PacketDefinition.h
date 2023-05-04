@@ -35,8 +35,6 @@
 #define CMD_ACTIVE 					0b1111
 #define CMD_INACTIVE 				0b0000
 
-#define YOHAN true 
-
 ///////////////////////////////////////////////////////////////////////////////////////
 
 // TODO: clean everything once AV data to send are defined
@@ -44,6 +42,20 @@
 // Test: text written from CLion from ERT2023GS repo toto
 // I think it is working !
 // And this message is written from STM32Cube IDE !!
+
+enum CAPSULE_ID {
+	// From Board to PC
+	IMAGE_START = 0x01,
+	IMAGE_MIDDLE,
+	IMAGE_END,
+	IMAGE_DATA,
+	
+	// From Board to LoRa
+	IMAGE_LORA,
+	TELEMETRY,			
+	LED,
+	RF_PARAM,
+};
 
 typedef struct __attribute__((__packed__)) {
 	// TODO: @Avioncis update for Nordend 2023 Mission
