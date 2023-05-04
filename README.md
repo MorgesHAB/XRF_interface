@@ -7,6 +7,11 @@ This repository should be used as a **git submodule** for the RF interface such 
 The goal is to minimize the protocol interface difficulties encountered between the AV-GS-GSE-PL subsystems.
 By having this git submodule repository shared between subsystems, no more interface documents are required as a git pull would be sufficient to be updated.
 
+### TODO UPDATE readme
+```
+git clone --recurse-submodules https://github.com/MorgesHAB/XSTRATO.git
+```
+
 ___________________________________________________________
 ### How to set up the git submodule in your code ?
 Follow this [link](https://git-scm.com/book/en/v2/Git-Tools-Submodules) or directly the instructions below.
