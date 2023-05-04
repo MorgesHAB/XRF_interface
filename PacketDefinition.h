@@ -44,6 +44,7 @@ enum CAPSULE_ID {
 	TELEMETRY,			
 	LED,
 	RF_PARAM,
+  CAM_PARAM
 };
 
 typedef enum {
