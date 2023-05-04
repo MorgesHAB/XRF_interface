@@ -49,16 +49,18 @@ enum CAPSULE_ID {
 ///////////////////////////////////////////////////////////////////////////////////////
 
 struct __attribute__((__packed__)) RFsettingsPacket {
+	uint32_t BW;
     uint8_t SF;
-    uint8_t BW;
     uint8_t CR;
 };
 const uint32_t RFsettingsPacket_size = sizeof(RFsettingsPacket);
+
 
 struct __attribute__((__packed__)) Xstrato_img_info {
     uint16_t  nbr_rx_packet;
     uint16_t  nbr_tot_packet;
 };
 const uint32_t Xstrato_img_info_size = sizeof(Xstrato_img_info);
+
 
 #endif
