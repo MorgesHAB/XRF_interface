@@ -46,6 +46,19 @@ enum CAPSULE_ID {
 	RF_PARAM,
 };
 
+typedef enum {
+    FRAMESIZE_96X96,    // 96x96
+    FRAMESIZE_QQVGA,    // 160x120
+    FRAMESIZE_QCIF,     // 176x144
+    FRAMESIZE_HQVGA,    // 240x176
+    FRAMESIZE_240X240,  // 240x240
+    FRAMESIZE_QVGA,     // 320x240
+    FRAMESIZE_CIF,      // 400x296
+    FRAMESIZE_HVGA,     // 480x320
+    FRAMESIZE_VGA,      // 640x480
+    FRAMESIZE_SVGA,     // 800x600
+} framesizeCustom;
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 struct __attribute__((__packed__)) RFsettingsPacket {
@@ -62,11 +75,26 @@ struct __attribute__((__packed__)) Xstrato_img_info {
 };
 const uint32_t Xstrato_img_info_size = sizeof(Xstrato_img_info);
 
+
 struct __attribute__((__packed__)) TeleFileImgInfo {
     uint16_t  currentPacketNumber;
     uint16_t  numberOfUncodedFragments;
 };
 const uint32_t TeleFileImgInfoSize = sizeof(TeleFileImgInfo);
+
+
+struct __attribute__((__packed__)) CameraSettingsPacket {
+    framesizeCustom  frameSize;
+    int  quality;
+	bool whiteBalanceEnable;
+	bool awbGainEnable;
+	int wbMode;
+	bool exposureEnable;
+	int exposureValue;
+	bool aec2Enable;
+	bool rawGmaEnable;
+};
+const uint32_t CameraSettingsPacketSize = sizeof(CameraSettingsPacket);
 
 
 #endif
