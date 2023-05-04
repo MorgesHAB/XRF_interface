@@ -22,8 +22,8 @@
 //
 //  EPFL Rocket Team - Nordend Project 2023
 //
-//  Charlotte Heibig & Lionel Isoz 
-//  25.03.2023 
+//  Lionel Isoz 
+//  04.05.2023 
 ///////////////////////////////////////////////////////////////////////////////////////
 #ifndef RADIO_PACKET_H
 #define RADIO_PACKET_H
