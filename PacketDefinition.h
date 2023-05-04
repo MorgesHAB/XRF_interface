@@ -22,8 +22,8 @@
 //
 //  EPFL Rocket Team - Nordend Project 2023
 //
-//  Charlotte Heibig & Lionel Isoz 
-//  25.03.2023 
+//  Lionel Isoz 
+//  04.05.2023 
 ///////////////////////////////////////////////////////////////////////////////////////
 #ifndef RADIO_PACKET_H
 #define RADIO_PACKET_H
@@ -49,11 +49,12 @@ enum CAPSULE_ID {
 ///////////////////////////////////////////////////////////////////////////////////////
 
 struct __attribute__((__packed__)) RFsettingsPacket {
+	uint32_t BW;
     uint8_t SF;
-    uint8_t BW;
     uint8_t CR;
 };
 const uint32_t RFsettingsPacket_size = sizeof(RFsettingsPacket);
+
 
 struct __attribute__((__packed__)) Xstrato_img_info {
     uint16_t  nbr_rx_packet;
