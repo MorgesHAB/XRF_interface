@@ -61,4 +61,11 @@ struct __attribute__((__packed__)) Xstrato_img_info {
 };
 const uint32_t Xstrato_img_info_size = sizeof(Xstrato_img_info);
 
+struct __attribute__((__packed__)) TeleFileImgInfo {
+    uint16_t  currentPacketNumber;
+    uint16_t  numberOfUncodedFragments;
+};
+const uint32_t TeleFileImgInfoSize = sizeof(TeleFileImgInfo);
+
+
 #endif
