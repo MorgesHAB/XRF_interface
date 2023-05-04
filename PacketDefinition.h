@@ -85,4 +85,13 @@ struct __attribute__((__packed__)) CameraSettingsPacket {
 const uint32_t CameraSettingsPacketSize = sizeof(CameraSettingsPacket);
 
 
+struct __attribute__((__packed__)) PositionPacket {
+  float_t lat;
+  float_t lon;
+  float_t alt;
+};
+const uint32_t PositionPacketSize = sizeof(PositionPacketSize);
+
+
+
 #endif
