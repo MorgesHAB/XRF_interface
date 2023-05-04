@@ -35,6 +35,8 @@
 #define CMD_ACTIVE 					0b1111
 #define CMD_INACTIVE 				0b0000
 
+#define YOHAN true 
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 // TODO: clean everything once AV data to send are defined
