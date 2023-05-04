@@ -44,21 +44,8 @@ enum CAPSULE_ID {
 	TELEMETRY,			
 	LED,
 	RF_PARAM,
-  CAM_PARAM
+    CAM_PARAM
 };
-
-typedef enum {
-    FRAMESIZE_96X96,    // 96x96
-    FRAMESIZE_QQVGA,    // 160x120
-    FRAMESIZE_QCIF,     // 176x144
-    FRAMESIZE_HQVGA,    // 240x176
-    FRAMESIZE_240X240,  // 240x240
-    FRAMESIZE_QVGA,     // 320x240
-    FRAMESIZE_CIF,      // 400x296
-    FRAMESIZE_HVGA,     // 480x320
-    FRAMESIZE_VGA,      // 640x480
-    FRAMESIZE_SVGA,     // 800x600
-} framesizeCustom;
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -85,7 +72,7 @@ const uint32_t TeleFileImgInfoSize = sizeof(TeleFileImgInfo);
 
 
 struct __attribute__((__packed__)) CameraSettingsPacket {
-    framesizeCustom  frameSize;
+    int framesize;
     int  quality;
 	bool whiteBalanceEnable;
 	bool awbGainEnable;
