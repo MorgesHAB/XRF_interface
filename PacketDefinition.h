@@ -90,8 +90,22 @@ struct __attribute__((__packed__)) PositionPacket {
   float_t lon;
   float_t alt;
 };
-const uint32_t PositionPacketSize = sizeof(PositionPacketSize);
+const uint32_t PositionPacketSize = sizeof(PositionPacket);
 
 
+struct __attribute__((__packed__)) TelemetryPacket {
+  PositionPacket position;
+
+  uint32_t bme_press;
+  float bme_temp;
+  float bme_hum;
+  uint16_t bat_level;
+
+  uint32_t SD_Bytes_used;
+
+  int rssi;
+  float snr;
+};
+const uint32_t TelemetryPacketSize = sizeof(TelemetryPacket);
 
 #endif
