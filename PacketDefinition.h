@@ -106,12 +106,12 @@ struct __attribute__((__packed__)) TelemetryPacket {
   uint32_t bme_press;
   float bme_temp;
   float bme_hum;
-  uint16_t bat_level;
 
-  uint32_t SD_Bytes_used;
+  //uint16_t bat_level;
+  //uint32_t SD_Bytes_used;
 
-  int rssi;
-  float snr;
+  int rssi_balloon;
+  float snr_balloon;
 };
 const uint32_t TelemetryPacketSize = sizeof(TelemetryPacket);
 
