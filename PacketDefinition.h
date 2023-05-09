@@ -44,7 +44,8 @@ enum CAPSULE_ID {
 	TELEMETRY,			
 	LED,
 	RF_PARAM,
-    CAM_PARAM
+  CAM_PARAM,
+  TRANSMISSION_PARAM
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +88,7 @@ const uint32_t CameraSettingsPacketSize = sizeof(CameraSettingsPacket);
 struct __attribute__((__packed__)) TransmissionSettingsPacket {
     bool transmissionEnable; // 0 disable, 1 enable
 	uint8_t silenceTime; // From 15s to 256s
-	float_t marginRate; // From 1 to ..3
+	float marginRate; // From 1 to ..3
 };
 const uint32_t TransmissionSettingsPacketSize = sizeof(TransmissionSettingsPacket);
 
