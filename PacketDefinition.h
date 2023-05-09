@@ -60,6 +60,7 @@ const uint32_t RFsettingsPacket_size = sizeof(RFsettingsPacket);
 
 struct __attribute__((__packed__)) Xstrato_img_info {
     uint16_t  nbr_rx_packet;
+    uint16_t  nbr_tx_packet;
     uint16_t  nbr_tot_packet;
 };
 const uint32_t Xstrato_img_info_size = sizeof(Xstrato_img_info);
