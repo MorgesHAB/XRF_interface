@@ -44,8 +44,9 @@ enum CAPSULE_ID {
 	TELEMETRY,			
 	LED,
 	RF_PARAM,
-  CAM_PARAM,
-  TRANSMISSION_PARAM
+    CAM_PARAM,
+    TRANSMISSION_PARAM,
+    ACK
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////
