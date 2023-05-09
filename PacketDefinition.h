@@ -101,20 +101,33 @@ struct __attribute__((__packed__)) PositionPacket {
 };
 const uint32_t PositionPacketSize = sizeof(PositionPacket);
 
+struct __attribute__((__packed__)) BarometerPacket {
+  float pressure;
+  float temperature;
+  float humidity;
+};
+const uint32_t BarometerPacketSize = sizeof(BarometerPacket);
 
 struct __attribute__((__packed__)) TelemetryPacket {
-  PositionPacket position;
-
-  uint32_t bme_press;
-  float bme_temp;
-  float bme_hum;
+    PositionPacket position;
+    BarometerPacket barometer;
 
   //uint16_t bat_level;
   //uint32_t SD_Bytes_used;
 
-  int rssi_balloon;
-  float snr_balloon;
+    int RssiBalloon;
+    float SnrBalloon;
 };
 const uint32_t TelemetryPacketSize = sizeof(TelemetryPacket);
+
+struct __attribute__((__packed__)) SerialTelemetryPacket {
+  TelemetryPacket telemetry;
+
+  int RssiGS;
+  float SnrGS;
+};
+const uint32_t SerialTelemetryPacketSize = sizeof(SerialTelemetryPacket);
+
+
 
 #endif
