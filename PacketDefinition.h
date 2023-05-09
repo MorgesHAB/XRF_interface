@@ -37,7 +37,7 @@ enum CAPSULE_ID {
 	IMAGE_START = 0x01,
 	IMAGE_MIDDLE,
 	IMAGE_END,
-	IMAGE_DATA,
+	IMAGE_DATA, 
 	
 	// From Board to LoRa
 	IMAGE_LORA,
