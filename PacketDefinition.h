@@ -110,23 +110,29 @@ struct __attribute__((__packed__)) BarometerPacket {
 };
 const uint32_t BarometerPacketSize = sizeof(BarometerPacket);
 
+struct __attribute__((__packed__)) RFinfo {
+  int rssi;
+  float snr;
+  float frequencyError;
+};
+const uint32_t RFinfoSize = sizeof(RFinfo);
+
 struct __attribute__((__packed__)) TelemetryPacket {
+    uint16_t packetTime;
     PositionPacket position;
     BarometerPacket barometer;
 
   //uint16_t bat_level;
   //uint32_t SD_Bytes_used;
 
-    int rssiBalloon;
-    float snrBalloon;
+    RFinfo balloon;
 };
 const uint32_t TelemetryPacketSize = sizeof(TelemetryPacket);
 
 struct __attribute__((__packed__)) SerialTelemetryPacket {
   TelemetryPacket telemetry;
 
-  int rssiGS;
-  float snrGS;
+  RFinfo ground;
 };
 const uint32_t SerialTelemetryPacketSize = sizeof(SerialTelemetryPacket);
 
