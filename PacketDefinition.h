@@ -117,16 +117,16 @@ struct __attribute__((__packed__)) TelemetryPacket {
   //uint16_t bat_level;
   //uint32_t SD_Bytes_used;
 
-    int RssiBalloon;
-    float SnrBalloon;
+    int rssiBalloon;
+    float snrBalloon;
 };
 const uint32_t TelemetryPacketSize = sizeof(TelemetryPacket);
 
 struct __attribute__((__packed__)) SerialTelemetryPacket {
   TelemetryPacket telemetry;
 
-  int RssiGS;
-  float SnrGS;
+  int rssiGS;
+  float snrGS;
 };
 const uint32_t SerialTelemetryPacketSize = sizeof(SerialTelemetryPacket);
 
