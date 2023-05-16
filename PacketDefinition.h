@@ -121,8 +121,10 @@ struct __attribute__((__packed__)) TelemetryPacket {
     uint16_t packetTime;
     PositionPacket position;
     BarometerPacket barometer;
+    float verticalSpeed;
+    float horizontalSpeed;
 
-  //uint16_t bat_level;
+    float bat_level;
   //uint32_t SD_Bytes_used;
 
     RFinfo balloon;
