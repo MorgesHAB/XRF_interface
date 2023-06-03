@@ -89,7 +89,7 @@ struct __attribute__((__packed__)) CameraSettingsPacket {
 const uint32_t CameraSettingsPacketSize = sizeof(CameraSettingsPacket);
 
 struct __attribute__((__packed__)) TransmissionSettingsPacket {
-    bool transmissionEnable; // 0 disable, 1 enable
+  bool transmissionEnable; // 0 disable, 1 enable
 	uint8_t silenceTime; // From 15s to 256s
 	float marginRate; // From 1 to ..3
 };
